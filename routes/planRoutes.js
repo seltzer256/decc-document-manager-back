@@ -10,9 +10,9 @@ const {
 
 const router = express.Router();
 
-router.use(restrictTo('admin'));
-
 router.use(protect);
+
+router.use(restrictTo('admin'));
 
 router.route('/').get(getAllPlans).post(createPlan);
 
